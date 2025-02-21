@@ -1,50 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Lost Descent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-900 text-white relative">
+
     <!-- Vidéo en arrière-plan -->
-    <video class="video-bg" autoplay muted loop>
+    <video class="absolute top-0 left-0 w-full h-full object-cover -z-10" autoplay muted loop>
         <source src="img/bg.mp4" type="video/mp4">
         Votre navigateur ne supporte pas les vidéos HTML5.
     </video>
 
+    <!-- Overlay pour améliorer la lisibilité -->
+    <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 -z-10"></div>
+
     <!-- Header -->
-    <header>
-        <div class="header-content">
-            <img class="logo" src="img/Balck_logo_Lost_Descent.png" alt="Logo">
-            <nav>
-                <a href="index.html">Accueil</a>
-                <a href="about_the_game.html">Présentation du jeu</a>
-                <a href="about_us.html">Présentation de l'équipe</a>
+    <header class="fixed top-0 left-0 w-full py-2 px-6 backdrop-blur-md bg-transparent">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <img class="w-48" src="img/Balck_logo_Lost_Descent.png" alt="Logo">
+            <nav class="space-x-6 text-lg bg-black bg-opacity-50 px-4 py-2 rounded-lg shadow-lg">
+                <a href="index.html" class="hover:text-yellow-400 transition">Accueil</a>
+                <a href="about_the_game.html" class="hover:text-yellow-400 transition">Présentation du jeu</a>
+                <a href="about_us.html" class="hover:text-yellow-400 transition">Présentation de l'équipe</a>
             </nav>
         </div>
     </header>
+    
+    
 
-    <!-- Container principal -->
-    <div class="container">
-        <div class="content">
-            <!-- Premier bloc -->
-            <div class="content-box">
-                <p>Placeholder trailer</p>
+    <!-- Contenu principal -->
+    <main class="mt-20 max-w-5xl mx-auto p-6 space-y-8 text-center">
+        
+        <!-- Placeholder Trailer -->
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl shadow-lg">
+            <img src="img/Balck_logo_Lost_Descent.png" alt="">
+            <div class="flex justify-center items-center my-8">
+                <video class="w-full max-w-3xl rounded-lg shadow-lg" controls>
+                    <source src="img/trailer.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas les vidéos HTML5.
+                </video>
             </div>
             
-            <!-- Deuxième bloc -->
-            <div class="content-box">
-                <p>download button Placeholder</p>
-                <button class="download-btn">Download le jeu</button>
-            </div>
-            
-            <!-- Troisième bloc -->
-            <div class="content-box">
-                <h2>Explication brève du projet</h2>
-                <p>Ce projet est le produit d'un projet étudié, nous voulions faire quelque chose qui ressemble à un die & retry type touhou mais en vue de la 3e personne j’espère que vous apprécierez notre jeu et je vous souhaite une bonne partie !</p>
-            </div>
         </div>
-    </div>
+
+        <!-- Download Section -->
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl shadow-lg">
+            <p class="text-lg mb-4">Téléchargez le jeu dès maintenant !</p>
+            <button class="bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold py-3 px-6 rounded-lg shadow-lg transition">
+                📥 Télécharger le jeu
+            </button>
+        </div>
+
+        <!-- Explication du projet -->
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl shadow-lg text-left">
+            <h2 class="text-2xl font-bold mb-4">Explication du projet</h2>
+            <p class="text-lg">
+                Ce projet est le fruit d’un travail acharné. Nous avons voulu créer un jeu mélangeant un gameplay type die & retry façon 
+                Touhou mais en vue à la troisième personne. Nous espérons que vous apprécierez l’expérience !
+            </p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 bg-opacity-80 backdrop-blur-md text-center py-6 mt-12">
+        <p class="text-gray-300">© 2025 Lost Descent. Tous droits réservés.</p>
+    </footer>
+
 </body>
 </html>
